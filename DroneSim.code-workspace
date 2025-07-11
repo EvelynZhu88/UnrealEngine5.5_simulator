@@ -1,0 +1,879 @@
+{
+	"folders": [
+		{
+			"name": "DroneSim",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/home/gyusam/UnrealEngine5.5"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"terminal.integrated.env.linux": {
+			"PATH": "/home/gyusam/UnrealEngine5.5/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+			"DOTNET_ROOT": "/home/gyusam/UnrealEngine5.5/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+			"DOTNET_HOST_PATH": "/home/gyusam/UnrealEngine5.5/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+			"DOTNET_MULTILEVEL_LOOKUP": "0",
+			"DOTNET_ROLL_FORWARD": "LatestMajor"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "DroneSim Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"Debug",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"Debug",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DroneSim Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"Debug",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"DebugGame",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"DebugGame",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DroneSim Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"DebugGame",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"Development",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"Development",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DroneSim Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"Development",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim Linux Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"Test",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim Linux Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"Test",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DroneSim Linux Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim Linux Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"Test",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim Linux Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"Shipping",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim Linux Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"Shipping",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DroneSim Linux Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim Linux Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"Linux",
+					"Shipping",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"Debug",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"Debug",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DroneSim LinuxArm64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"Debug",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DroneSim LinuxArm64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"Development",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"Development",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DroneSim LinuxArm64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"Development",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"Test",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"Test",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DroneSim LinuxArm64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"Test",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"Shipping",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"Shipping",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DroneSim LinuxArm64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSim LinuxArm64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSim",
+					"LinuxArm64",
+					"Shipping",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSimEditor Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSimEditor",
+					"Linux",
+					"Debug",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSimEditor Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSimEditor",
+					"Linux",
+					"Debug",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DroneSimEditor Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSimEditor Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSimEditor",
+					"Linux",
+					"Debug",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSimEditor Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSimEditor",
+					"Linux",
+					"DebugGame",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSimEditor Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSimEditor",
+					"Linux",
+					"DebugGame",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DroneSimEditor Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSimEditor Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSimEditor",
+					"Linux",
+					"DebugGame",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSimEditor Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSimEditor",
+					"Linux",
+					"Development",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSimEditor Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSimEditor",
+					"Linux",
+					"Development",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DroneSimEditor Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			},
+			{
+				"label": "DroneSimEditor Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"DroneSimEditor",
+					"Linux",
+					"Development",
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/gyusam/UnrealEngine5.5"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch DroneSim (Debug)",
+				"request": "launch",
+				"program": "/home/gyusam/Documents/Unreal Projects/DroneSim/Binaries/Linux/UnrealGame-Linux-Debug",
+				"preLaunchTask": "DroneSim Linux Debug Build",
+				"args": [
+				],
+				"cwd": "/home/gyusam/UnrealEngine5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/home/gyusam/UnrealEngine5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch DroneSim (DebugGame)",
+				"request": "launch",
+				"program": "/home/gyusam/Documents/Unreal Projects/DroneSim/Binaries/Linux/UnrealGame-Linux-DebugGame",
+				"preLaunchTask": "DroneSim Linux DebugGame Build",
+				"args": [
+				],
+				"cwd": "/home/gyusam/UnrealEngine5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/home/gyusam/UnrealEngine5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch DroneSim (Development)",
+				"request": "launch",
+				"program": "/home/gyusam/Documents/Unreal Projects/DroneSim/Binaries/Linux/UnrealGame",
+				"preLaunchTask": "DroneSim Linux Development Build",
+				"args": [
+				],
+				"cwd": "/home/gyusam/UnrealEngine5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/home/gyusam/UnrealEngine5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch DroneSim (Test)",
+				"request": "launch",
+				"program": "/home/gyusam/Documents/Unreal Projects/DroneSim/Binaries/Linux/UnrealGame-Linux-Test",
+				"preLaunchTask": "DroneSim Linux Test Build",
+				"args": [
+				],
+				"cwd": "/home/gyusam/UnrealEngine5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/home/gyusam/UnrealEngine5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch DroneSim (Shipping)",
+				"request": "launch",
+				"program": "/home/gyusam/Documents/Unreal Projects/DroneSim/Binaries/Linux/UnrealGame-Linux-Shipping",
+				"preLaunchTask": "DroneSim Linux Shipping Build",
+				"args": [
+				],
+				"cwd": "/home/gyusam/UnrealEngine5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/home/gyusam/UnrealEngine5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch DroneSimEditor (Debug)",
+				"request": "launch",
+				"program": "/home/gyusam/UnrealEngine5.5/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+				"preLaunchTask": "DroneSimEditor Linux Debug Build",
+				"args": [
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject"
+				],
+				"cwd": "/home/gyusam/UnrealEngine5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/home/gyusam/UnrealEngine5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch DroneSimEditor (DebugGame)",
+				"request": "launch",
+				"program": "/home/gyusam/UnrealEngine5.5/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+				"preLaunchTask": "DroneSimEditor Linux DebugGame Build",
+				"args": [
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject"
+				],
+				"cwd": "/home/gyusam/UnrealEngine5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/home/gyusam/UnrealEngine5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch DroneSimEditor (Development)",
+				"request": "launch",
+				"program": "/home/gyusam/UnrealEngine5.5/Engine/Binaries/Linux/UnrealEditor",
+				"preLaunchTask": "DroneSimEditor Linux Development Build",
+				"args": [
+					"/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject"
+				],
+				"cwd": "/home/gyusam/UnrealEngine5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/home/gyusam/UnrealEngine5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Linux Development Build",
+				"program": "/home/gyusam/UnrealEngine5.5/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/home/gyusam/Documents/Unreal Projects/DroneSim/DroneSim.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"env": {
+					"PATH": "/home/gyusam/UnrealEngine5.5/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+					"DOTNET_ROOT": "/home/gyusam/UnrealEngine5.5/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+					"DOTNET_HOST_PATH": "/home/gyusam/UnrealEngine5.5/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+					"DOTNET_MULTILEVEL_LOOKUP": "0",
+					"DOTNET_ROLL_FORWARD": "LatestMajor"
+				},
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/home/gyusam/UnrealEngine5.5"
+			}
+		]
+	}
+}
